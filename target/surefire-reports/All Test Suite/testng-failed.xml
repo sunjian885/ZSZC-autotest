@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" verbose="0">
+  <listeners>
+    <listener class-name="com.common.testng.ExtentTestNGIReporterListener"/>
+    <listener class-name="com.common.testng.TestResultListener"/>
+  </listeners>
+  <test name="ZSZC-autotest(failed)">
+    <classes>
+      <class name="com.test.demo.ZTJGTest">
+        <methods>
+          <include name="getTest"/>
+          <include name="getLoginToken"/>
+        </methods>
+      </class> <!-- com.test.demo.ZTJGTest -->
+    </classes>
+  </test> <!-- ZSZC-autotest(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

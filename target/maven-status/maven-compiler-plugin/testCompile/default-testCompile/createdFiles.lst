@@ -6,9 +6,11 @@ com\test\demo\JDBCTest.class
 com\common\testng\ExtentTestNGIReporterListener$1.class
 com\common\database\DBOperate.class
 com\common\testng\TestResultListener.class
-com\test\demo\Test.class
+com\common\utils\ExcelDataUtil$1.class
 com\common\utils\ContextHelper.class
 com\test\demo\ZTJGTest.class
 com\common\utils\ConfigProperty.class
 com\common\utils\HttpClientUtil.class
 com\test\demo\RSATest.class
+com\test\demo\DebugTest.class
+com\common\utils\ExcelDataUtil.class

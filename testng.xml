@@ -9,12 +9,12 @@
         <classes>
             <class name="com.test.demo.ZTJGTest">
                 <methods>
-<!--                    <include name="getTest"/>-->
+                    <include name="getTest"/>
                     <include name="queryWinningBidProjectTest"/>
-<!--                    <include name="getWinningBidProjectTest"/>-->
-<!--                    <include name="saveProjectTest"/>-->
-<!--                    <include name="submitProjectTest"/>-->
-<!--                    <include name="completeTest"/>-->
+                    <include name="getWinningBidProjectTest"/>
+                    <include name="saveProjectTest"/>
+                    <include name="submitProjectTest"/>
+                    <include name="completeTest"/>
                 </methods>
             </class>
         </classes>

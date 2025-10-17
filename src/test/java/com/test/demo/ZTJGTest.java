@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.common.database.DBInfo;
 import com.common.database.DBOperate;
 import com.common.utils.ConfigProperty;
+import com.common.utils.ExcelDataUtil;
 import com.common.utils.HttpClientUtil;
 import com.common.utils.RSAUtil;
 import org.json.JSONArray;
@@ -13,6 +14,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.net.URLEncoder;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -49,7 +51,6 @@ public class ZTJGTest {
                 {"","0"},
         };
     }
-
     @Test(dataProvider = "testData",description = "根据项目名称、审核状态，搜索中标项目")
     public void queryWinningBidProjectTest(String projectName,String status) throws Exception{
         String projectNameEncode = URLEncoder.encode(projectName, "UTF-8");
@@ -58,6 +59,22 @@ public class ZTJGTest {
         System.out.println(">>>>>>>>>=getResult "+getResult);
         //TODO 查询数据断言
     }
+
+    @DataProvider(name = "testExcelData")
+    public Object[][] data() throws Exception{
+        String pathFile = "target/test-classes/data/testData.xlsx";
+        ExcelDataUtil testcase = new ExcelDataUtil();
+        return testcase.testData(pathFile);
+    }
+    @Test(dataProvider = "testExcelData",description = "根据项目名称、审核状态，搜索中标项目")
+    public void queryWinningBidProjectTest01(HashMap<String, String> data) throws Exception{
+        String projectNameEncode = URLEncoder.encode(data.get("name"), "UTF-8");
+        String url = "http://trade.ztzc-test.zszc.jianshicha.cn/api/etbtrade-source/winningBidProject/page?size=10&current=1&projectName="+projectNameEncode+"&auditStatus="+data.get("status");
+        JSONObject getResult = HttpClientUtil.sendGetPairToken(url,tendereeAuthorization,tokenName);
+        System.out.println(">>>>>>>>>=getResult "+getResult);
+        //TODO 查询数据断言
+    }
+
 
     @Test(description = "GET请求-招标采购列表")
     public void getTest(){
@@ -105,17 +122,17 @@ public class ZTJGTest {
             throw new RuntimeException(e);
         }
         /*
-        todo:断言。连接数据库，比对数据。
+        TODO:断言。连接数据库，比对数据。
          可通过调用接口形式形式获取到项目的id（根据项目名称查询）
          获取到save的项目id，查询数据库，然后断言check。
          */
     }
 
-    @Test(enabled=false,description = "POST请求-submit中标项目")
+    @Test(enabled=true,description = "POST请求-submit中标项目")
     public void submitProjectTest(){
 
         String postUrl = "http://trade.ztzc-test.zszc.jianshicha.cn/api/etbtrade-source/winningBidProject/save?submit=true";
-        String bodyData = "{\"area\":\"13,1301,130102\",\"managerIds\":\"1852153743966130176\",\"bidManagerNames\":\"齐东旭\",\"projectName\":\""+projectName+"\",\"addr\":\"神农大厦002\",\"priceYuan\":\"10086\",\"fileUrl\":\"ed50c5a9dcc98c9a1236470b65299f0d\",\"price\":100,\"areaName\":\"河北省/石家庄市/长安区\"}";
+        String bodyData = "{\"area\":\"13,1301,130102\",\"managerIds\":\"1852153743966130176\",\"bidManagerNames\":\"齐东旭\",\"projectName\":\""+projectName+"\",\"addr\":\"神农大厦002\",\"priceYuan\":\"10086\",\"fileUrl\":\"ed50c5a9dcc98c9a1236470b65299f0d\",\"price\":100000,\"areaName\":\"河北省/石家庄市/长安区\"}";
 
         try {
             JSONObject getResult = HttpClientUtil.sendPostBodyToken(postUrl,bodyData,tendereeAuthorization,tokenName);
@@ -125,7 +142,7 @@ public class ZTJGTest {
         }
     }
 
-    @Test(enabled=false,description = "PUT请求-处理工单-审核项目-审核通过")
+    @Test(enabled=true,description = "PUT请求-处理工单-审核项目-审核通过")
     public void completeTest() throws Exception{
         //todo 通过调用接口或者通过查询数据库，获取到 businessKey，然后进行审核
 
@@ -194,5 +211,6 @@ public class ZTJGTest {
         businessKey = JSONObject.parseObject(jsonArray.get(0).toString()).get("id").toString();
         System.out.println(">>>>>>>>>>>businessKey= "+businessKey);
     }
+
 
 }

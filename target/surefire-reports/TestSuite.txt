@@ -1,4 +1,13 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.593 sec
+Tests run: 7, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 12.892 sec <<< FAILURE!
+getTest(com.test.demo.ZTJGTest)  Time elapsed: 1.122 sec  <<< FAILURE!
+java.lang.AssertionError: expected [11] but found [3]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:370)
+	at org.testng.Assert.assertEquals(Assert.java:380)
+	at com.test.demo.ZTJGTest.getTest(ZTJGTest.java:96)
+

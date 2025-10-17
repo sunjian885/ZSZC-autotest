@@ -1,9 +1,10 @@
 domain=http://trade.ztzc-test.zszc.jianshicha.cn/api
 
 database.url.jy_biz_open_eval=jdbc:mysql://192.168.4.82:3306/jy_biz_open_eval?user=root&password=zszc
-#???????????
+database.url.shu_han_tong=jdbc:mysql://192.168.4.42:3306/gltl_guarantee?user=root&password=mysql
+#招标人
 ZTJGUserName=qidongxu
 ZTJGPassword=Cc123456
-#???????????
+#投标人
 HBJZUserName=zzlei1
 HBJZPassword=Cc123456

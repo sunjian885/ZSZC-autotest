@@ -23,21 +23,21 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
         <span>All suites</span>
-        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
-          <img class="collapse-all-icon" src="collapseall.gif">
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
           </img> <!-- collapse-all-icon -->
         </a> <!-- collapse-all-link -->
       </div> <!-- navigator-suite-header -->
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-All_Test_Suite">
-              <span class="suite-name border-passed">All Test Suite</span>
+            <a href="#" panel-name="suite-All_Test_Suite" class="navigator-link">
+              <span class="suite-name border-failed">All Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -47,37 +47,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-All_Test_Suite">
+                  <a href="#" panel-name="test-xml-All_Test_Suite" class="navigator-link ">
                     <span>E:\code\ZSZC-autotest\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-All_Test_Suite">
+                  <a href="#" panel-name="testlist-All_Test_Suite" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-All_Test_Suite">
+                  <a href="#" panel-name="group-All_Test_Suite" class="navigator-link ">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-All_Test_Suite">
+                  <a href="#" panel-name="times-All_Test_Suite" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-All_Test_Suite">
+                  <a href="#" panel-name="reporter-All_Test_Suite" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-All_Test_Suite">
+                  <a href="#" panel-name="ignored-methods-All_Test_Suite" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-All_Test_Suite">
+                  <a href="#" panel-name="chronological-All_Test_Suite" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -90,7 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">7 methods, 1 failed,   6 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-All_Test_Suite" class="hide-methods failed suite-All_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-All_Test_Suite -->
+                      <a href="#" panel-name="suite-All_Test_Suite" class="show-methods failed suite-All_Test_Suite"> (show)</a> <!-- show-methods failed suite-All_Test_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-All_Test_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.test.demo.ZTJGTest" class="method navigator-link" hash-for-method="getTest">getTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-All_Test_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,23 +114,33 @@
                     </span>
                     <div class="method-list-content passed suite-All_Test_Suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-All_Test_Suite" title="com.test.demo.ZTJGTest" hash-for-method="queryWinningBidProjectTest(科菲, )">queryWinningBidProjectTest(科菲, )</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.test.demo.ZTJGTest" class="method navigator-link" hash-for-method="completeTest">completeTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-All_Test_Suite" title="com.test.demo.ZTJGTest" hash-for-method="queryWinningBidProjectTest(, 0)">queryWinningBidProjectTest(, 0)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.test.demo.ZTJGTest" class="method navigator-link" hash-for-method="queryWinningBidProjectTest(autoTest, )">queryWinningBidProjectTest(autoTest, )</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-All_Test_Suite" title="com.test.demo.ZTJGTest" hash-for-method="queryWinningBidProjectTest(测试, 2)">queryWinningBidProjectTest(测试, 2)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.test.demo.ZTJGTest" class="method navigator-link" hash-for-method="queryWinningBidProjectTest(测试, 2)">queryWinningBidProjectTest(测试, 2)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-All_Test_Suite" title="com.test.demo.ZTJGTest" hash-for-method="queryWinningBidProjectTest(autoTest, )">queryWinningBidProjectTest(autoTest, )</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.test.demo.ZTJGTest" class="method navigator-link" hash-for-method="queryWinningBidProjectTest(科菲, )">queryWinningBidProjectTest(科菲, )</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.test.demo.ZTJGTest" class="method navigator-link" hash-for-method="queryWinningBidProjectTest(, 0)">queryWinningBidProjectTest(, 0)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.test.demo.ZTJGTest" class="method navigator-link" hash-for-method="submitProjectTest">submitProjectTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-All_Test_Suite -->
@@ -131,12 +155,63 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-All_Test_Suite" class="panel All_Test_Suite">
+          <div class="suite-All_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.test.demo.ZTJGTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="getTest">
+                  </a> <!-- getTest -->
+                  <span class="method-name">getTest</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [11] but found [3]
+	at com.test.demo.ZTJGTest.getTest(ZTJGTest.java:96)
+	at com.sun.proxy.$Proxy0.invoke(Unknown Source)
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(GET请求-招标采购列表)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_Test_Suite-class-failed -->
           <div class="suite-All_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">com.test.demo.ZTJGTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="completeTest">
+                  </a> <!-- completeTest -->
+                  <span class="method-name">completeTest</span>
+                  <em>
+(PUT请求-处理工单-审核项目-审核通过)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="queryWinningBidProjectTest(autoTest, )">
+                  </a> <!-- queryWinningBidProjectTest(autoTest, ) -->
+                  <span class="method-name">queryWinningBidProjectTest</span>
+                  <span class="parameters">(autoTest, )</span>
+                  <em>
+(根据项目名称、审核状态，搜索中标项目)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="queryWinningBidProjectTest(测试, 2)">
+                  </a> <!-- queryWinningBidProjectTest(测试, 2) -->
+                  <span class="method-name">queryWinningBidProjectTest</span>
+                  <span class="parameters">(测试, 2)</span>
+                  <em>
+(根据项目名称、审核状态，搜索中标项目)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="queryWinningBidProjectTest(科菲, )">
@@ -159,22 +234,11 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="queryWinningBidProjectTest(测试, 2)">
-                  </a> <!-- queryWinningBidProjectTest(测试, 2) -->
-                  <span class="method-name">queryWinningBidProjectTest</span>
-                  <span class="parameters">(测试, 2)</span>
+                  <a name="submitProjectTest">
+                  </a> <!-- submitProjectTest -->
+                  <span class="method-name">submitProjectTest</span>
                   <em>
-(根据项目名称、审核状态，搜索中标项目)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="queryWinningBidProjectTest(autoTest, )">
-                  </a> <!-- queryWinningBidProjectTest(autoTest, ) -->
-                  <span class="method-name">queryWinningBidProjectTest</span>
-                  <span class="parameters">(autoTest, )</span>
-                  <em>
-(根据项目名称、审核状态，搜索中标项目)                  </em>
+(POST请求-submit中标项目)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -188,7 +252,7 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite verbose=&quot;0&quot; name=&quot;All Test Suite&quot;&gt;
+&lt;suite name=&quot;All Test Suite&quot; verbose=&quot;0&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.common.testng.ExtentTestNGIReporterListener&quot;/&gt;
     &lt;listener class-name=&quot;com.common.testng.TestResultListener&quot;/&gt;
@@ -197,7 +261,12 @@
     &lt;classes&gt;
       &lt;class name=&quot;com.test.demo.ZTJGTest&quot;&gt;
         &lt;methods&gt;
+          &lt;include name=&quot;getTest&quot;/&gt;
           &lt;include name=&quot;queryWinningBidProjectTest&quot;/&gt;
+          &lt;include name=&quot;getWinningBidProjectTest&quot;/&gt;
+          &lt;include name=&quot;saveProjectTest&quot;/&gt;
+          &lt;include name=&quot;submitProjectTest&quot;/&gt;
+          &lt;include name=&quot;completeTest&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.test.demo.ZTJGTest --&gt;
     &lt;/classes&gt;
@@ -239,28 +308,40 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(7);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'queryWinningBidProjectTest')
+data.setCell(0, 1, 'completeTest')
 data.setCell(0, 2, 'com.test.demo.ZTJGTest')
-data.setCell(0, 3, 648);
+data.setCell(0, 3, 5618);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'queryWinningBidProjectTest')
+data.setCell(1, 1, 'getTest')
 data.setCell(1, 2, 'com.test.demo.ZTJGTest')
-data.setCell(1, 3, 465);
+data.setCell(1, 3, 1116);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'queryWinningBidProjectTest')
 data.setCell(2, 2, 'com.test.demo.ZTJGTest')
-data.setCell(2, 3, 450);
+data.setCell(2, 3, 979);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'queryWinningBidProjectTest')
 data.setCell(3, 2, 'com.test.demo.ZTJGTest')
-data.setCell(3, 3, 436);
+data.setCell(3, 3, 663);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'queryWinningBidProjectTest')
+data.setCell(4, 2, 'com.test.demo.ZTJGTest')
+data.setCell(4, 3, 659);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'queryWinningBidProjectTest')
+data.setCell(5, 2, 'com.test.demo.ZTJGTest')
+data.setCell(5, 3, 624);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'submitProjectTest')
+data.setCell(6, 2, 'com.test.demo.ZTJGTest')
+data.setCell(6, 3, 512);
 window.suiteTableData['All_Test_Suite']= { tableData: data, tableDiv: 'times-div-All_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 10 seconds</span>
               <div id="times-div-All_Test_Suite">
               </div> <!-- times-div-All_Test_Suite -->
             </div> <!-- times-div -->
@@ -275,19 +356,15 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-All_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">5 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.test.demo.ZTJGTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">submitProjectTest</span>
-                <br/>
-                <span class="ignored-method-name">completeTest</span>
-                <br/>
                 <span class="ignored-method-name">saveProjectTest</span>
                 <br/>
-                <span class="ignored-method-name">getTest</span>
+                <span class="ignored-method-name">queryWinningBidProjectTest01</span>
                 <br/>
                 <span class="ignored-method-name">getWinningBidProjectTest</span>
                 <br/>
@@ -307,20 +384,34 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">getTest</span>
+                <span class="method-start">2131 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
                 <span class="method-name">queryWinningBidProjectTest(测试, 2)</span>
-                <span class="method-start">2127 ms</span>
+                <span class="method-start">3255 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">queryWinningBidProjectTest(科菲, )</span>
-                <span class="method-start">2566 ms</span>
+                <span class="method-start">4234 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">queryWinningBidProjectTest(autoTest, )</span>
-                <span class="method-start">3214 ms</span>
+                <span class="method-start">4858 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">queryWinningBidProjectTest(, 0)</span>
-                <span class="method-start">3679 ms</span>
+                <span class="method-start">5517 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">submitProjectTest</span>
+                <span class="method-start">6180 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">completeTest</span>
+                <span class="method-start">6693 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
